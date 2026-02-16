@@ -35,23 +35,6 @@ export default function Hero() {
                 <span aria-hidden="true">&#9654;</span> Watch Demo
               </button>
             </div>
-
-            <div className="flex items-center gap-6 mt-8 justify-center lg:justify-start" aria-label="Platform statistics">
-              <div className="text-center">
-                <p className="text-2xl font-bold text-primary">50K+</p>
-                <p className="text-xs text-muted">Active Users</p>
-              </div>
-              <div className="w-px h-10 bg-border" aria-hidden="true" />
-              <div className="text-center">
-                <p className="text-2xl font-bold text-primary">1M+</p>
-                <p className="text-xs text-muted">Readings Done</p>
-              </div>
-              <div className="w-px h-10 bg-border" aria-hidden="true" />
-              <div className="text-center">
-                <p className="text-2xl font-bold text-primary">4.9</p>
-                <p className="text-xs text-muted">User Rating</p>
-              </div>
-            </div>
           </div>
 
           {/* Hero illustration */}

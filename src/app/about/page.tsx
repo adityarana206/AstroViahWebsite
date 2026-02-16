@@ -23,13 +23,6 @@ const values = [
   { title: "Community", description: "We're building a community of cosmic enthusiasts who share, learn, and grow together on their spiritual journey.", icon: "\uD83E\uDD1D" },
 ];
 
-const stats = [
-  { number: "50,000+", label: "Active Users" },
-  { number: "1M+", label: "Readings Completed" },
-  { number: "12", label: "Zodiac Signs Covered" },
-  { number: "4.9/5", label: "Average Rating" },
-];
-
 const team = [
   { name: "Astrology Engine", role: "Vedic & Western astrology computation layer with ephemeris-grade accuracy.", icon: "\u2699\uFE0F" },
   { name: "AI Interpreter", role: "Natural language AI that translates complex planetary data into actionable insights.", icon: "\uD83E\uDDE0" },
@@ -57,20 +50,6 @@ export default function AboutPage() {
               To democratize astrology by making personalized, accurate, and insightful cosmic guidance accessible to everyone through
               the power of artificial intelligence — while preserving the depth and authenticity of ancient Vedic and Western astrological traditions.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 gradient-bg-subtle">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <p className="text-3xl sm:text-4xl font-bold text-primary mb-1">{stat.number}</p>
-                <p className="text-sm text-muted">{stat.label}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
