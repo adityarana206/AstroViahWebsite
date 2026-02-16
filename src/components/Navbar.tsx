@@ -2,11 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
-  { href: "#features", label: "Features" },
-  { href: "#horoscope", label: "Horoscope" },
-  { href: "#how-it-works", label: "How It Works" },
-  { href: "#testimonials", label: "Reviews" },
-  { href: "#app", label: "App" },
+  { href: "/horoscope", label: "Horoscope" },
+  { href: "/tarot", label: "Tarot" },
+  { href: "/matchmaking", label: "Matchmaking" },
+  { href: "/ai-astrology", label: "AI Astrology" },
+  { href: "/pricing", label: "Pricing" },
+  { href: "/about", label: "About" },
 ];
 
 export default function Navbar() {
@@ -29,27 +30,33 @@ export default function Navbar() {
               <span className="text-xl font-bold gradient-text">AstroViah</span>
             </Link>
 
-            <ul className="hidden md:flex items-center gap-8" role="menubar">
+            <ul className="hidden lg:flex items-center gap-6" role="menubar">
               {navLinks.map((link) => (
                 <li key={link.href} role="none">
-                  <a
+                  <Link
                     href={link.href}
                     role="menuitem"
                     className="text-sm font-medium text-muted hover:text-primary transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
 
             <div className="flex items-center gap-3">
-              <button className="hidden sm:block px-4 py-2 text-sm font-medium text-primary hover:text-primary-dark transition-colors">
-                Sign In
-              </button>
-              <button className="gradient-bg text-white px-5 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity shadow-lg shadow-purple-200">
+              <Link
+                href="/contact"
+                className="hidden sm:block px-4 py-2 text-sm font-medium text-primary hover:text-primary-dark transition-colors"
+              >
+                Contact
+              </Link>
+              <Link
+                href="/pricing"
+                className="gradient-bg text-white px-5 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity shadow-lg shadow-purple-200"
+              >
                 Get Started
-              </button>
+              </Link>
             </div>
           </div>
         </div>

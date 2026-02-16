@@ -2,19 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 
 const featureLinks = [
-  { label: "AI Astrology", href: "#features" },
-  { label: "Tarot Reading", href: "#features" },
-  { label: "Matchmaking", href: "#features" },
-  { label: "Daily Horoscope", href: "#horoscope" },
-  { label: "Birth Chart", href: "#features" },
+  { label: "AI Astrology", href: "/ai-astrology" },
+  { label: "Tarot Reading", href: "/tarot" },
+  { label: "Matchmaking", href: "/matchmaking" },
+  { label: "Daily Horoscope", href: "/horoscope" },
+  { label: "Birth Chart", href: "/birth-chart" },
+  { label: "Numerology", href: "/numerology" },
 ];
 
 const companyLinks = [
-  { label: "About Us", href: "#" },
-  { label: "Our Astrologers", href: "#" },
-  { label: "Blog", href: "#" },
-  { label: "Careers", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "About Us", href: "/about" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const legalLinks = [
@@ -67,16 +66,9 @@ export default function Footer() {
     <footer role="contentinfo" className="bg-white border-t border-border py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* Brand */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4" aria-label="AstroViah Home">
-              <Image
-                src="/logo.png"
-                alt="AstroViah Logo"
-                width={36}
-                height={36}
-                className="rounded-full"
-              />
+              <Image src="/logo.png" alt="AstroViah Logo" width={36} height={36} className="rounded-full" />
               <span className="text-lg font-bold gradient-text">AstroViah</span>
             </Link>
             <p className="text-sm text-muted leading-relaxed">
@@ -84,35 +76,32 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Features */}
           <nav aria-label="Feature links">
             <h4 className="font-semibold mb-4 text-sm">Features</h4>
             <ul className="space-y-2">
               {featureLinks.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm text-muted hover:text-primary transition-colors">
+                  <Link href={link.href} className="text-sm text-muted hover:text-primary transition-colors">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </nav>
 
-          {/* Company */}
           <nav aria-label="Company links">
             <h4 className="font-semibold mb-4 text-sm">Company</h4>
             <ul className="space-y-2">
               {companyLinks.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm text-muted hover:text-primary transition-colors">
+                  <Link href={link.href} className="text-sm text-muted hover:text-primary transition-colors">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </nav>
 
-          {/* Legal */}
           <div>
             <nav aria-label="Legal links">
               <h4 className="font-semibold mb-4 text-sm">Legal</h4>
@@ -143,12 +132,8 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted">
-            &copy; {new Date().getFullYear()} AstroViah. All rights reserved.
-          </p>
-          <p className="text-sm text-muted">
-            Made with &#9829; for the cosmic community
-          </p>
+          <p className="text-sm text-muted">&copy; {new Date().getFullYear()} AstroViah. All rights reserved.</p>
+          <p className="text-sm text-muted">Made with &#9829; for the cosmic community</p>
         </div>
       </div>
     </footer>
